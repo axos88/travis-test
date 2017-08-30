@@ -24,8 +24,7 @@ jobs:
           name: run tests
           command: |
             ls
-            wc -l testfile
-            LINES=`wc -l testfile | cut -d' ' -f1`
+            LINES=`ls -1 | wc -l | cut -d' ' -f1`
 
             echo FOUND $LINES lines.
 
