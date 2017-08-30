@@ -25,7 +25,7 @@ jobs:
           command: |
             ls
             wc -l testfile
-            LINES=`wc -l testfile`
+            LINES=`wc -l testfile | cut -d' ' -f1`
 
             echo FOUND $LINES lines.
 
